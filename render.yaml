@@ -10,8 +10,8 @@ services:
     autoDeploy: true
     envVars:
       - key: VITE_BACKEND_URL
-        value: https://<tu-backend-url>/api
-    staticPublishPath: /dist
+        value: https://192.168.0.211:5000/api
+    staticPublishPath: ./dist
     repo: https://github.com/Seeent/Generador-de-Excusas
     branch: master
     rootDir: Holacaracola
