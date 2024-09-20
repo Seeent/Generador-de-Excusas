@@ -1,59 +1,31 @@
 
-# services:
-#     - type: web # valid values: https://render.com/docs/yaml-spec#type
-#       region: ohio
-#       name: mindtomind
-#       env: python # valid values: https://render.com/docs/yaml-spec#environment
-#       buildCommand: "./render_build.sh"
-#       startCommand: "gunicorn wsgi --chdir ./src/"
-#       plan: free # optional; defaults to starter
-#       numInstances: 1
-#       envVars:
-#           - key: BASENAME # Imported from Heroku app
-#             value: /
-#           - key: FLASK_APP # Imported from Heroku app
-#             value: src/app.py
-#           - key: FLASK_APP_KEY # Imported from Heroku app
-#             value: hola mundo
-#           - key: DEBUG # Imported from Heroku app
-#             value: FALSE
-#           - key: FLASK_DEBUG # Imported from Heroku app
-#             value: 0
-#           - key: PYTHON_VERSION
-#             value: 3.10.6
-#           - key: DATABASE_URL # Render PostgreSQL database
-#             fromDatabase:
-#                 name: postgresql-trapezoidal-42170
-#                 property: connectionString
-#           - fromGroup: mind_to_mind
-#           - key: FRONTURL
-#             fromService:
-#               name: mindtomind
-#               type: web
-#               property: host
-#           - key: BACKEND_URL
-#             fromService:
-#               name: mindtomind
-#               type: web
-#               property: host
-
-
-# databases: # Render PostgreSQL database
-#     - name: postgresql-trapezoidal-42170
-#       region: ohio
-#       ipAllowList: [] # only allow internal connections
-#       plan: free # optional; defaults to starter
-
-
+version: 1
 services:
   - type: web
-    name: GeneradorExcusas
+    name: generador-excusas-frontend
     env: node
     plan: free
-    buildCommand: npm install
-    startCommand: npm run dev
+    buildCommand: npm install && npm run build
+    startCommand: serve -s dist
+    autoDeploy: true
+    envVars:
+      - key: VITE_BACKEND_URL
+        value: https://<tu-backend-url>/api
+    staticPublishPath: /dist
     repo: https://github.com/Seeent/Generador-de-Excusas
     branch: master
+    rootDir: Holacaracola
 
-
-
+  - type: web
+    name: generador-excusas-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    autoDeploy: true
+    envVars:
+      - key: OPENAI_API_KEY
+        fromSecret: OPENAI_API_KEY
+    repo: https://github.com/Seeent/Generador-de-Excusas
+    branch: master
+    rootDir: generarBack
