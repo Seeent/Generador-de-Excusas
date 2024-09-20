@@ -52,8 +52,8 @@ services:
     plan: free
     buildCommand: npm install
     startCommand: npm run dev
-      repo: https://github.com/Seeent/Generador-de-Excusas
-      branch: master
+    repo: https://github.com/Seeent/Generador-de-Excusas
+    branch: master
 
 
 
