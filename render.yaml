@@ -24,7 +24,7 @@ services:
     autoDeploy: true
     envVars:
       - key: OPENAI_API_KEY
-        fromSecret: OPENAI_API_KEY
+        value: k-proj-2BmwRxrcsgibvACUWF8MgkH8b8ZAFJ-CMk_sS5pq9qS97uaZsYwFfhLBZJpmPgPT-S69hGe70jT3BlbkFJWILkyaJr_xK2f1yR-I3Rn79Nnxx6W_0Xty3Pum_YiR3NwjPIfQwvqxMrajUOh0gKDXXEjbPf8A
     repo: https://github.com/Seeent/Generador-de-Excusas
     branch: master
     rootDir: generarBack
