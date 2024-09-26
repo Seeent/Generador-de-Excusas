@@ -16,7 +16,7 @@
 
 body {
 
-  background-image: url('C:\Users\Usuario\Generador de excusas\Holacaracola\imagenes\devil.jpg'); 
+  background-image: url('..\imagenes\devil.jpg'); 
   background-size: cover; 
   background-position: center ; 
   background-attachment: fixed; 
