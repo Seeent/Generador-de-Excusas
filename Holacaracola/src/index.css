@@ -16,7 +16,7 @@
 
 body {
 
-  background-image: url('..\imagenes\devil.jpg'); 
+  background-image: url('..\public\imagenes\devil.jpg');
   background-size: cover; 
   background-position: center ; 
   background-attachment: fixed; 
