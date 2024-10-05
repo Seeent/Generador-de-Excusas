@@ -16,7 +16,7 @@
 
 body {
 
-  background-image: url('..\public\imagenes\devil.jpg');
+  background-image: url('https://res.cloudinary.com/dhfllghzw/image/upload/v1728032443/devil_con_fondo_hbudlx.jpg');
   background-size: cover; 
   background-position: center ; 
   background-attachment: fixed; 
@@ -45,7 +45,7 @@ a:hover {
 
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 1.1;
 }
 
@@ -91,7 +91,7 @@ button:focus-visible {
   }
 
   h1 {
-    font-size: 2rem; 
+    font-size: 1.5rem; 
   }
 
   .logo {
@@ -103,13 +103,15 @@ button:focus-visible {
   }
 
   .input {
-  
+    background-color: #000;
     font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
+.excuse-output{
+  font-size: 17px;
+}
   .grid {
     width: 100%;
     height: auto;
@@ -126,13 +128,15 @@ button:focus-visible {
   }
 
   h1 {
-    font-size: 1.7rem;
+    font-size: 1.2rem;
   }
 
   .logo {
     height: 3.5em;
   }
-
+  .excuse-output{
+    font-size: 13px;
+  }
   #root {
     padding: 0.8rem;
   }
@@ -159,7 +163,7 @@ button:focus-visible {
   }
 
   h1 {
-    font-size: 1.9rem;
+    font-size: 1.3rem;
   }
 
   .logo {
@@ -169,7 +173,9 @@ button:focus-visible {
   #root {
     padding: 0.9rem;
   }
-
+  .excuse-output{
+    font-size: 15px;
+  }
   .input {
     font-size: 15px;
     padding-inline: 1.6rem;
@@ -192,7 +198,7 @@ button:focus-visible {
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 
   .logo {
@@ -202,7 +208,9 @@ button:focus-visible {
   #root {
     padding: 0.85rem;
   }
-
+  .excuse-output{
+    font-size: 13px;
+  }
   .input {
     font-size: 14.5px;
     padding-inline: 1.5rem;
@@ -225,7 +233,7 @@ button:focus-visible {
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .logo {
@@ -235,7 +243,9 @@ button:focus-visible {
   #root {
     padding: 1rem;
   }
-
+  .excuse-output{
+    font-size: 14px;
+  }
   .input {
     font-size: 15.5px;
     padding-inline: 1.7rem;
@@ -258,7 +268,7 @@ button:focus-visible {
   }
 
   h1 {
-    font-size: 1.9rem;
+    font-size: 1.4rem;
   }
 
   .logo {
@@ -268,7 +278,9 @@ button:focus-visible {
   #root {
     padding: 0.9rem;
   }
-
+  .excuse-output{
+    font-size: 15px;
+  }
   .input {
     font-size: 15px;
     padding-inline: 1.6rem;
@@ -291,13 +303,15 @@ button:focus-visible {
   }
 
   h1 {
-    font-size: 1.6rem;
+    font-size: 1.1rem;
   }
 
   .logo {
     height: 3.4em;
   }
-
+  .excuse-output{
+    font-size: 14px;
+  }
   #root {
     padding: 0.7rem;
   }
@@ -324,7 +338,7 @@ button:focus-visible {
   }
 
   h1 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 
   .logo {
@@ -334,7 +348,9 @@ button:focus-visible {
   #root {
     padding: 1.2rem;
   }
-
+  .excuse-output{
+    font-size: 16px;
+  }
   .input {
     font-size: 18px;
     padding-inline: 2rem;
@@ -357,7 +373,7 @@ button:focus-visible {
   }
 
   h1 {
-    font-size: 2.1rem;
+    font-size: 1.6rem;
   }
 
   .logo {
@@ -367,7 +383,9 @@ button:focus-visible {
   #root {
     padding: 1.1rem;
   }
-
+  .excuse-output{
+    font-size: 14px;
+  }
   .input {
     font-size: 17px;
     padding-inline: 1.9rem;
@@ -390,7 +408,7 @@ button:focus-visible {
   }
 
   h1 {
-    font-size: 1.6rem;
+    font-size: 1.1rem;
   }
 
   .logo {
@@ -400,7 +418,9 @@ button:focus-visible {
   #root {
     padding: 0.7rem;
   }
-
+  .excuse-output{
+    font-size: 12px;
+  }
   .input {
     font-size: 13.5px;
     padding-inline: 1.3rem;
@@ -423,13 +443,15 @@ button:focus-visible {
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
 
   .logo {
     height: 3.5em;
   }
-
+  .excuse-output{
+    font-size: 12px;
+  }
   #root {
     padding: 0.85rem;
   }

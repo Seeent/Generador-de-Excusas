@@ -5,7 +5,7 @@ import './App.css'
 
 
 const backendUrl=import.meta.env.VITE_BACKEND_URL;
-console.log(backendUrl);
+console.log('Backend URL:', backendUrl);
 function App() {
   const [count, setCount] = useState(0)
 
@@ -17,7 +17,7 @@ function App() {
     try{
       await incrementCount();
 
-      const response = await fetch(`${backendUrl}/generate-excuse`,{
+      const response = await fetch(`${backendUrl}/api/generate-excuse`,{
         method:'POST',
         headers:{
           'Content-Type':'application/json',
@@ -42,8 +42,11 @@ function App() {
 
     const incrementCount = async () => {
       try {
-        const response = await fetch(`${backendUrl}/increment-count`, {
-          method: 'POST'
+        const response = await fetch(`${backendUrl}/api/increment-count`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+        },
         });
   
         if (!response.ok) {
@@ -59,7 +62,7 @@ function App() {
 
     const fetchCount = async () => {
       try {
-        const response = await fetch(`${backendUrl}/get-count`, {
+        const response = await fetch(`${backendUrl}/api/get-count`, {
           method: 'GET'
         });
   
